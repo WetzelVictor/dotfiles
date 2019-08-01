@@ -1,0 +1,4 @@
+/* reconfigure the keyboard (alt-Gr keys for instance) */
+sudo dpkg-reconfigure keyboard-configuration
+
+/* Or go to the keyboards option and set "3rd level command" to left win */

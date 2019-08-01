@@ -51,7 +51,7 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git battery)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -114,6 +114,8 @@ _tmuxinator() {
 
 compdef _tmuxinator tmuxinator mux
 alias mux="tmuxinator"
+alias rm="trash-rm" # change rm to "move to trash-rm"
+alias o="xdg-open" # to open a file with default app from the terminal
 
 # added by Anaconda2 installer
 export PATH="/home/victorw/anaconda/bin:$PATH"
@@ -125,3 +127,33 @@ export PATH="/home/victorw/anaconda/bin:$PATH"
 # sh-basic-offset: 2
 # End:
 # vim: ft=zsh sw=2 ts=2 et
+xmodmap -e 'keycode 133=Super_L ISO_Level3_Shift'
+
+# Compile all c files in folder
+alias gcc_all="for F in *.c; do gcc -Wall -o ${F%.c} $F; done"
+
+# Permanent programs
+alias matlab='bash /usr/local/MATLAB/R2017b/bin/matlab'
+
+
+# ==============
+# ==== TEMP ====
+
+# Temporary paths
+alias s3='cd ~/Dropbox/Université/Master/s3'
+alias s4='cd ~/Dropbox/Université/Master/s4'
+alias journal='vim ~/Dropbox/Université/Master/s4/journal.md'
+alias gvoc='cd ~/git/vocal-phs/'
+
+# Softwares
+alias spyder3='~/anaconda/envs/pyphs/bin/spyder'
+alias spyder2='spyder'
+
+alias jupyter3='~/anaconda/envs/pyphs/bin/jupyter'
+alias jupyter2='jupyter'
+
+alias pyphs='source activate pyphs'
+alias kill_ibus='killall ibus-daemon'
+alias prj='/home/victorw/Dropbox/Université/monitorat/3E103/perso/03_proj_2018/3E103\ -\ Projet/A2'
+
+alias dog="cat"

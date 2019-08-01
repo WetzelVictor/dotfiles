@@ -251,8 +251,10 @@ let g:tex_conceal = ""
 
 let g:enable_italic_font=1
 let g:enable_bold_font=1
+let g:Tex_GotoError=0
 set background=dark
 colorscheme hybrid_reverse
 let g:syntastic_mode_map = { 'passive_filetypes': ['python'] }
 set pastetoggle=<F5>
 map <F10> :make
+
